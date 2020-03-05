@@ -1,0 +1,25 @@
+.centerCard {
+    justify-content: center;
+    display: flex;
+}
+
+.search {
+    padding: 8px 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 19px;
+}
+
+.effect {
+    width: 20%;
+    height: 60%;
+    transition: width 0.1s;
+}
+
+.effect:hover {
+    width: 20.5%;
+    height: 61%;
+}

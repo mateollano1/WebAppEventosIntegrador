@@ -1,0 +1,80 @@
+<mat-toolbar></mat-toolbar>
+
+<mat-grid-list class="centerCard" cols="12" rowHeight="100px">
+    <mat-grid-tile [colspan]="12" [rowspan]="1">
+
+        <div layout=”row”>
+            <div>
+                <h3>Selecciona un evento:</h3>
+            </div>
+            <div> <input class="search" type="text" name="search" placeholder="Buscar...">
+            </div>
+            <div>
+            </div>
+        </div>
+
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="12" [rowspan]="3">
+        <mat-card class="effect" style="margin: 1em; border-color: black; border-style: solid;">
+            <mat-card-title title="Exposición proyectos integradores">Exposición proyectos...</mat-card-title>
+            <mat-card-content>
+                <div><i class="material-icons">
+                    date_range
+                    </i> Fecha: 25 de Junio de 2020</div>
+                <div><i class="material-icons">
+                    place
+                    </i> Lugar: 18-210 (LIS) </div>
+                <div><i class="material-icons">
+                    confirmation_number
+                    </i> Código: 1045254</div>
+            </mat-card-content>
+            <mat-card-footer style="text-align: center; margin: 1em;">
+                <button mat-raised-button color="primary">Seleccionar</button>
+            </mat-card-footer>
+        </mat-card>
+        <mat-card class="effect" style="margin: 1em; border-color: black; border-style: solid;">
+            <mat-card-title title="Exposición proyectos integradores">Exposición proyectos...</mat-card-title>
+            <mat-card-content>
+                <div><i class="material-icons">
+                    date_range
+                    </i> Fecha: 25 de Junio de 2020</div>
+                <div><i class="material-icons">
+                    place
+                    </i> Lugar: 18-210 (LIS) </div>
+                <div><i class="material-icons">
+                    confirmation_number
+                    </i> Código: 1045254</div>
+            </mat-card-content>
+            <mat-card-footer style="text-align: center; margin: 1em;">
+                <button mat-raised-button color="primary">Seleccionar</button>
+            </mat-card-footer>
+        </mat-card>
+        <mat-card class="effect" style="margin: 1em; border-color: black; border-style: solid;">
+            <mat-card-title title="Exposición proyectos integradores">Exposición proyectos...</mat-card-title>
+            <mat-card-content>
+                <div><i class="material-icons">
+                    date_range
+                    </i> Fecha: 25 de Junio de 2020</div>
+                <div><i class="material-icons">
+                    place
+                    </i> Lugar: 18-210 (LIS) </div>
+                <div><i class="material-icons">
+                    confirmation_number
+                    </i> Código: 1045254</div>
+            </mat-card-content>
+            <mat-card-footer style="text-align: center; margin: 1em;">
+                <button mat-raised-button [routerLink]="['/dashboard']" routerLinkActive="router-link-active" color="primary">Seleccionar</button>
+            </mat-card-footer>
+        </mat-card>
+
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="12" [rowspan]="1">
+        <button title="Crear Evento" style="padding: 8px;" mat-raised-button color="primary"><i style="font-size: 50px" class="material-icons">
+            control_point
+            </i></button>
+        <!-- <pagination-controls></pagination-controls> -->
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="12" [rowspan]="1">
+        <pagination-controls></pagination-controls>
+    </mat-grid-tile>
+</mat-grid-list>

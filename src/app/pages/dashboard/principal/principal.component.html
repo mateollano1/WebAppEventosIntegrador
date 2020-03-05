@@ -1,0 +1,47 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer style=" width: 15em;" mode="side" opened>
+        <mat-card style="height: 11em; text-align: center;">
+            <mat-card-content>
+                <img style="border-radius: 50%;" src="../../../../assets/imgs/img_avatar.png" width="100px" alt="Avatar">
+            </mat-card-content>
+            <mat-card-footer>Exposición proyectos integradores</mat-card-footer>
+        </mat-card>
+        <div style="margin-left: 1em;">
+            <div>
+                <!-- <button mat-button>Eventos</button> -->
+            </div>
+            <div>
+                <!-- prob tree -->
+                <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                        <button mat-icon-button disabled></button><button mat-button>{{node.name}}</button>
+                    </mat-tree-node>
+                    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+                        <mat-icon class="mat-icon-rtl-mirror">
+                          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                        </mat-icon>
+                      </button> {{node.name}}
+                    </mat-tree-node>
+                </mat-tree>
+                <!-- prob tree -->
+            </div>
+
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar color="primary">Eventos UdeA
+            <div style="position: absolute; right: 0; margin-right: 1em;">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Configuración</button>
+                    <button mat-menu-item>Cambiar de evento</button>
+                    <button mat-menu-item>Cerrar sesión</button>
+                </mat-menu>
+
+            </div>
+        </mat-toolbar>
+    </mat-drawer-content>
+</mat-drawer-container>
